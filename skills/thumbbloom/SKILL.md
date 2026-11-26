@@ -5,9 +5,9 @@ metadata:
   short-description: Design editable social covers
 ---
 
-# ThumbBloom · 封面灵感
+# ThumbBloom
 
-Turn a creator's content into a cover that is accurate, readable at thumbnail size, and easy to revise. Respond in the user's language. Use the tools available in the host agent; the skill itself needs no API key.
+Turn a creator's content into a cover that is accurate, readable at thumbnail size, and easy to revise. Respond in English by default; use the user's requested language when specified. For Chinese output, read [references/localization.zh-CN.md](references/localization.zh-CN.md). Use the tools available in the host agent; the skill itself needs no API key.
 
 ## Brief
 
@@ -23,7 +23,7 @@ Before drawing, extract one truthful promise or question from the content. Avoid
 4. Produce an editable source where the host permits it (SVG, HTML/CSS, layered design file, or a design specification). Also export PNG/JPG when possible. Do not pretend that a text prompt alone is a finished image. If image generation or rendering is unavailable, provide a precise production-ready layout spec and copy.
 5. Check the full-size cover and a small thumbnail. Verify spelling, crop, line breaks, contrast, factual claims, brand consistency, and export dimensions. Revise obvious failures before handing over.
 
-For quick editable covers and examples, open the repository's `web/index.html` in a browser. It runs locally and exports SVG/PNG. The web demo implements three graphic directions and is a starting point; use richer original imagery or the host's image tools when the brief calls for it.
+The repository's `examples/` folder contains three editable SVG cases. `npm run examples` regenerates them with the local renderer. Use the host's image tools or the creator's licensed assets when the brief calls for richer imagery.
 
 ## Response format
 

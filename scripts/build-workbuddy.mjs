@@ -6,16 +6,18 @@ const text = await readFile(new URL('SKILL.md', source), 'utf8');
 const body = text.replace(/^---\n[\s\S]*?\n---\n/, '');
 const header = `---
 name: thumbbloom
-display_name: 封面灵感
+display_name: ThumbBloom
 display_name_en: ThumbBloom
-description: 为视频、文章、播客设计可编辑的社媒封面与缩略图；需要封面创意、排版或成品时使用。
+description: Design editable social covers and thumbnails for videos, articles, and podcasts.
 description_zh: 提炼内容亮点，制作可编辑封面，并检查缩略图可读性。
 description_en: Design editable covers and thumbnails for creator content.
 version: 0.1.0
 author: ThumbBloom contributors
+examples_en:
+  - "Design a bold cover for my video"
+  - "Create an editorial cover for this article"
 examples_zh:
-  - "为我的短视频设计醒目的封面"
-  - "给这篇文章做一个有编辑感的封面"
+  - "为我的短视频设计封面"
 ---
 `;
 await mkdir(target, { recursive: true });

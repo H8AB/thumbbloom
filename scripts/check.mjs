@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { buildSvg, examples, normalize, sizes } from '../web/core.js';
+import { buildSvg, examples, normalize, sizes } from './core.js';
 
 for (const item of examples) {
   const svg = buildSvg(item);

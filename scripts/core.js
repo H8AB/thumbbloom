@@ -1,14 +1,14 @@
 export const sizes = {
-  video: { label: '横版视频 · 16:9', width: 1280, height: 720 },
-  article: { label: '文章卡片 · 3:4', width: 900, height: 1200 },
-  square: { label: '方形动态 · 1:1', width: 1080, height: 1080 },
-  vertical: { label: '竖版视频 · 9:16', width: 1080, height: 1920 }
+  video: { label: 'Landscape video · 16:9', width: 1280, height: 720 },
+  article: { label: 'Article card · 3:4', width: 900, height: 1200 },
+  square: { label: 'Square post · 1:1', width: 1080, height: 1080 },
+  vertical: { label: 'Vertical video · 9:16', width: 1080, height: 1920 }
 };
 
 export const examples = [
-  { id: 'desk', name: '视频｜5 分钟重启桌面', kind: 'video', style: 'bold', eyebrow: '效率实验室  /  VOL. 01', title: '5 分钟\n重启桌面', subtitle: '让工作区重新清爽起来', brand: 'CREATOR LAB', accent: '#F6E15B' },
-  { id: 'notes', name: '文章｜把知识整理成系统', kind: 'article', style: 'editorial', eyebrow: '长文 · 方法论', title: '把知识\n整理成系统', subtitle: '从零开始，搭建自己的笔记方法', brand: 'FIELD NOTES', accent: '#C56C47' },
-  { id: 'habits', name: '播客｜每天一点也算创作', kind: 'square', style: 'minimal', eyebrow: '创作者对话  ·  第 08 期', title: '每天一点\n也算创作', subtitle: '聊聊能坚持下来的小习惯', brand: '小小创作室', accent: '#9EBAA7' }
+  { id: 'desk', name: 'Video | Five-minute desk reset', kind: 'video', style: 'bold', eyebrow: 'CREATOR LAB  /  VOL. 01', title: '5-MINUTE\nDESK RESET', subtitle: 'A calmer workspace in minutes', brand: 'CREATOR LAB', accent: '#F6E15B' },
+  { id: 'notes', name: 'Article | A better note system', kind: 'article', style: 'editorial', eyebrow: 'FIELD NOTES  /  GUIDE', title: 'BUILD A\nNOTE SYSTEM', subtitle: 'Keep what you learn, find it again', brand: 'FIELD NOTES', accent: '#C56C47' },
+  { id: 'habits', name: 'Podcast | Daily creative habits', kind: 'square', style: 'minimal', eyebrow: 'CREATOR CONVERSATIONS  /  08', title: 'CREATE\nEVERY DAY', subtitle: 'Small creative habits that last', brand: 'THE MAKER ROOM', accent: '#9EBAA7' }
 ];
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&apos;' }[ch]));
@@ -43,7 +43,7 @@ export function normalize(input = {}) {
   return {
     kind, style, accent: color(input.accent),
     eyebrow: clean(input.eyebrow, 45),
-    title: clean(input.title, 120) || '你的封面标题',
+    title: clean(input.title, 120) || 'YOUR COVER TITLE',
     subtitle: clean(input.subtitle, 70),
     brand: clean(input.brand, 40)
   };

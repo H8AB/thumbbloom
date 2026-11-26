@@ -1,68 +1,59 @@
-# ThumbBloom · 封面灵感
+# ThumbBloom
 
-一个开源的社媒封面设计技能：让智能体从内容中提炼封面信息，并交付可编辑成品。附带可直接在浏览器运行的演示设计台，支持视频、文章、播客封面，导出 SVG 和 PNG。
+**An open-source cover design skill for creators.** ThumbBloom helps an AI agent turn a video, article, podcast, or series brief into distinct cover concepts and an editable final design. It prioritizes truthful copy, readable hierarchy, appropriate crops, and checks at thumbnail size.
 
-**[在线体验封面设计台](https://h8ab.github.io/thumbbloom/)**
+[简体中文说明](README.zh-CN.md) · [Skill instructions](skills/thumbbloom/SKILL.md) · [Three cover examples](examples/overview.png)
 
-![三个案例封面](examples/overview.svg)
+![Three ThumbBloom cover examples](examples/overview.png)
 
-## 立即体验
+## What is included
 
-直接打开 [`web/index.html`](web/index.html)，或者运行本地静态服务器：
+- A portable Agent Skill in [`skills/thumbbloom/`](skills/thumbbloom/SKILL.md), with English as the default output language and Chinese available on request.
+- Three fictional, editable SVG examples: a video thumbnail, an article cover, and a podcast cover.
+- A dependency-free Node renderer that regenerates the examples. It is a reusable starting point, while the skill can use an agent's existing image or design tools for richer work.
+- A WorkBuddy-specific skill variant generated from the same instructions.
 
-```bash
-python3 -m http.server 8000
-```
+## Install the skill
 
-随后访问 `http://localhost:8000/`。无账号、无 API Key、无构建依赖。Google Fonts 无法访问时会自动使用系统字体；字体差异可能影响换行，导出前请检查预览。
+Copy the entire `skills/thumbbloom/` folder, including `references/`:
 
-设计台提供三种原创 SVG 构图、四种画布比例、实时预览、小尺寸预览和 SVG/PNG 下载。它是可编辑的基础设计工具；技能可指导智能体结合用户素材创作更复杂的封面。
+- **Codex:** `.agents/skills/thumbbloom/` in a project, or `~/.agents/skills/thumbbloom/` for your user.
+- **Claude Code:** `.claude/skills/thumbbloom/` in a project, or `~/.claude/skills/thumbbloom/` for your user.
+- **Claude web:** ZIP the `thumbbloom/` folder and upload it through the custom Skills feature if your account supports it.
+- **WorkBuddy:** Run `npm run workbuddy`, then import `platforms/workbuddy/thumbbloom/` as a folder or ZIP through its Skill upload flow.
+- **Other Agent Skills hosts:** Import `skills/thumbbloom/` and keep its folder structure.
 
-## 在智能体中安装
+The installation routes follow the current [OpenAI](https://developers.openai.com/api/reference/cli), [Claude](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview), and [WorkBuddy](https://open.workbuddy.cn/en/docs/skill) documentation. Check the host's current interface when installing.
 
-技能目录是 [`skills/thumbbloom/`](skills/thumbbloom/SKILL.md)。复制整个目录，保留 `SKILL.md` 和 `references/`。
+## Try it
 
-- **Codex**：复制到项目的 `.agents/skills/thumbbloom/`，或用户目录 `~/.agents/skills/thumbbloom/`。新会话中可说“用 thumbbloom 为这篇文章设计封面”。
-- **Claude Code**：复制到项目的 `.claude/skills/thumbbloom/`，或 `~/.claude/skills/thumbbloom/`。
-- **Claude 网页端**：把 `thumbbloom/` 文件夹打成 ZIP，在支持自定义技能的账号中从设置里的 Skills 功能上传。具体入口和可用性以当前账号界面为准。
-- **WorkBuddy**：运行 `npm run workbuddy` 生成 `platforms/workbuddy/thumbbloom/`，再在技能市场选择“添加技能 / 上传技能”，上传该文件夹或打包的 ZIP。生成版包含 WorkBuddy 所需的展示字段。
-- **其他支持 Agent Skills 的应用**：导入 `skills/thumbbloom/` 目录；若只支持贴入提示词，可使用下方的示例请求并把 `SKILL.md` 作为应用指令。
+> Use ThumbBloom to design a 16:9 cover for a five-minute desk reset video aimed at remote workers. Show two distinct concepts, choose one, and deliver editable SVG plus PNG. Check legibility at thumbnail size.
 
-安装路径与上传方式参考 [OpenAI 技能说明](https://developers.openai.com/api/reference/cli)、[Claude Agent Skills 文档](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) 和 [WorkBuddy 技能文档](https://open.workbuddy.cn/docs/skill)。
+> Design matching 3:4 and 1:1 covers for an article about building a personal note system. Keep the tone editorial and the content promise accurate.
 
-## 用法示例
+For Chinese output, add **“Please respond and write the cover copy in Simplified Chinese.”** The skill loads its optional Chinese localization reference when needed.
 
-> 用 thumbbloom 为一条“5 分钟重启桌面”的视频设计封面。受众是居家办公者，做一个醒目的横版版本。先给两种不同方向，再交付可编辑 SVG 和 PNG，并检查缩略图可读性。
-
-> 给一篇关于个人知识管理的文章做封面。调性安静、有编辑感，标题是“把知识整理成系统”。请给 3:4 和 1:1 两个版本，保持同一视觉语言。
-
-三个虚构演示见 [`examples/`](examples/)：视频、文章、播客。点击网页中的案例卡片可加载并修改。示例 SVG 由 `npm run examples` 使用网页同一渲染函数生成。
-
-## 目录
-
-```text
-skills/thumbbloom/   跨平台技能入口和设计参考
-web/                 纯静态交互演示
-examples/            从同一渲染器生成的案例 SVG
-scripts/             案例生成与检查脚本
-```
-
-## 发布网页
-
-将仓库推送到 GitHub 后，可在仓库 Settings → Pages 选择“Deploy from a branch”，从默认分支的根目录发布。根目录的 `index.html` 会跳转到 `web/`。如部署到其他静态托管平台，直接把整个仓库作为静态站点即可。
-
-## 开发与验证
+## Reproduce the examples
 
 ```bash
 npm run examples
-npm run check
 npm run workbuddy
+npm run check
 ```
 
-`npm run check` 只用 Node 标准库。开发者若安装了 Codex 的 skill-creator，可额外用其 `quick_validate.py` 验证 `skills/thumbbloom/`。
+Only Node.js is needed; there are no runtime packages or API keys. The checked-in SVGs are editable in vector tools. `npm run check` verifies canvas dimensions, generated examples, text escaping, and consistency between the core and WorkBuddy skill instructions. Font rendering may vary by device; inspect exports before publishing.
 
-## 当前范围
+## Repository layout
 
-网页端使用原创几何图形与排版，没有照片上传、AI 生图、自动理解文章或云端存储；这些能力留给安装技能的智能体及其现有工具。画布尺寸是演示预设，正式发布前应核对目标平台的最新要求与 UI 遮挡区域。SVG 文字使用系统字体，跨设备外观可能略有不同。
+```text
+skills/thumbbloom/          Portable skill and design references
+platforms/workbuddy/       WorkBuddy metadata variant
+examples/                  Three SVG covers and an overview image
+scripts/                   Example renderer and checks
+```
 
-欢迎提交问题和改进。代码与示例采用 [MIT License](LICENSE)。
+## Scope
+
+The renderer uses original shapes and typography. It does not fetch images, generate photos, read articles automatically, or store creator content. The skill can guide an agent that has those capabilities. Canvas sizes in the examples are starting points; verify each platform's current requirements and UI overlays before publishing.
+
+Code and examples are released under the [MIT License](LICENSE). Contributions and issue reports are welcome.
