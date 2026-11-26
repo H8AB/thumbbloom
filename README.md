@@ -1,8 +1,8 @@
-# Covercraft · 封面工坊
+# ThumbBloom · 封面灵感
 
 一个开源的社媒封面设计技能：让智能体从内容中提炼封面信息，并交付可编辑成品。附带可直接在浏览器运行的演示设计台，支持视频、文章、播客封面，导出 SVG 和 PNG。
 
-**[在线体验封面设计台](https://h8ab.github.io/covercraft/)**
+**[在线体验封面设计台](https://h8ab.github.io/thumbbloom/)**
 
 ![三个案例封面](examples/overview.svg)
 
@@ -20,19 +20,19 @@ python3 -m http.server 8000
 
 ## 在智能体中安装
 
-技能目录是 [`skills/covercraft/`](skills/covercraft/SKILL.md)。复制整个目录，保留 `SKILL.md` 和 `references/`。
+技能目录是 [`skills/thumbbloom/`](skills/thumbbloom/SKILL.md)。复制整个目录，保留 `SKILL.md` 和 `references/`。
 
-- **Codex**：复制到项目的 `.agents/skills/covercraft/`，或用户目录 `~/.agents/skills/covercraft/`。新会话中可说“用 covercraft 为这篇文章设计封面”。
-- **Claude Code**：复制到项目的 `.claude/skills/covercraft/`，或 `~/.claude/skills/covercraft/`。
-- **Claude 网页端**：把 `covercraft/` 文件夹打成 ZIP，在支持自定义技能的账号中从设置里的 Skills 功能上传。具体入口和可用性以当前账号界面为准。
-- **WorkBuddy**：运行 `npm run workbuddy` 生成 `platforms/workbuddy/covercraft/`，再在技能市场选择“添加技能 / 上传技能”，上传该文件夹或打包的 ZIP。生成版包含 WorkBuddy 所需的展示字段。
-- **其他支持 Agent Skills 的应用**：导入 `skills/covercraft/` 目录；若只支持贴入提示词，可使用下方的示例请求并把 `SKILL.md` 作为应用指令。
+- **Codex**：复制到项目的 `.agents/skills/thumbbloom/`，或用户目录 `~/.agents/skills/thumbbloom/`。新会话中可说“用 thumbbloom 为这篇文章设计封面”。
+- **Claude Code**：复制到项目的 `.claude/skills/thumbbloom/`，或 `~/.claude/skills/thumbbloom/`。
+- **Claude 网页端**：把 `thumbbloom/` 文件夹打成 ZIP，在支持自定义技能的账号中从设置里的 Skills 功能上传。具体入口和可用性以当前账号界面为准。
+- **WorkBuddy**：运行 `npm run workbuddy` 生成 `platforms/workbuddy/thumbbloom/`，再在技能市场选择“添加技能 / 上传技能”，上传该文件夹或打包的 ZIP。生成版包含 WorkBuddy 所需的展示字段。
+- **其他支持 Agent Skills 的应用**：导入 `skills/thumbbloom/` 目录；若只支持贴入提示词，可使用下方的示例请求并把 `SKILL.md` 作为应用指令。
 
 安装路径与上传方式参考 [OpenAI 技能说明](https://developers.openai.com/api/reference/cli)、[Claude Agent Skills 文档](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) 和 [WorkBuddy 技能文档](https://open.workbuddy.cn/docs/skill)。
 
 ## 用法示例
 
-> 用 covercraft 为一条“5 分钟重启桌面”的视频设计封面。受众是居家办公者，做一个醒目的横版版本。先给两种不同方向，再交付可编辑 SVG 和 PNG，并检查缩略图可读性。
+> 用 thumbbloom 为一条“5 分钟重启桌面”的视频设计封面。受众是居家办公者，做一个醒目的横版版本。先给两种不同方向，再交付可编辑 SVG 和 PNG，并检查缩略图可读性。
 
 > 给一篇关于个人知识管理的文章做封面。调性安静、有编辑感，标题是“把知识整理成系统”。请给 3:4 和 1:1 两个版本，保持同一视觉语言。
 
@@ -41,7 +41,7 @@ python3 -m http.server 8000
 ## 目录
 
 ```text
-skills/covercraft/   跨平台技能入口和设计参考
+skills/thumbbloom/   跨平台技能入口和设计参考
 web/                 纯静态交互演示
 examples/            从同一渲染器生成的案例 SVG
 scripts/             案例生成与检查脚本
@@ -59,7 +59,7 @@ npm run check
 npm run workbuddy
 ```
 
-`npm run check` 只用 Node 标准库。开发者若安装了 Codex 的 skill-creator，可额外用其 `quick_validate.py` 验证 `skills/covercraft/`。
+`npm run check` 只用 Node 标准库。开发者若安装了 Codex 的 skill-creator，可额外用其 `quick_validate.py` 验证 `skills/thumbbloom/`。
 
 ## 当前范围
 

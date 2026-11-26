@@ -1,11 +1,11 @@
 ---
-name: covercraft
+name: thumbbloom
 description: Design and produce legible, platform-aware covers and thumbnails for social videos, articles, podcasts, and series; use when a creator needs a cover concept, editable artwork, or variants.
 metadata:
   short-description: Design editable social covers
 ---
 
-# Covercraft · 封面工坊
+# ThumbBloom · 封面灵感
 
 Turn a creator's content into a cover that is accurate, readable at thumbnail size, and easy to revise. Respond in the user's language. Use the tools available in the host agent; the skill itself needs no API key.
 

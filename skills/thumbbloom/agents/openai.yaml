@@ -1,4 +1,4 @@
 interface:
-  display_name: "封面工坊 Covercraft"
+  display_name: "封面灵感 ThumbBloom"
   short_description: "为视频、文章和播客设计可编辑封面"
   default_prompt: "请根据我的内容设计一个社媒封面，先给出不同方向，再制作可编辑成品。"

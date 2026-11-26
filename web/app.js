@@ -39,7 +39,7 @@ function download(blob, filename) {
 }
 
 document.querySelector('#downloadSvg').addEventListener('click', () => {
-  download(new Blob([currentSvg], { type: 'image/svg+xml;charset=utf-8' }), `covercraft-${values().kind}.svg`);
+  download(new Blob([currentSvg], { type: 'image/svg+xml;charset=utf-8' }), `thumbbloom-${values().kind}.svg`);
   status.textContent = 'SVG 已下载，可在矢量编辑器中继续修改。';
 });
 
@@ -52,7 +52,7 @@ document.querySelector('#downloadPng').addEventListener('click', () => {
     canvas.getContext('2d').drawImage(img, 0, 0);
     URL.revokeObjectURL(url);
     canvas.toBlob(blob => {
-      if (blob) { download(blob, `covercraft-${data.kind}.png`); status.textContent = 'PNG 已下载。'; }
+      if (blob) { download(blob, `thumbbloom-${data.kind}.png`); status.textContent = 'PNG 已下载。'; }
       else status.textContent = 'PNG 导出失败，请先下载 SVG。';
     }, 'image/png');
   };

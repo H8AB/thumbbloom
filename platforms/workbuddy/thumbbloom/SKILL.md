@@ -1,18 +1,18 @@
 ---
-name: covercraft
-display_name: 封面工坊
-display_name_en: Covercraft
+name: thumbbloom
+display_name: 封面灵感
+display_name_en: ThumbBloom
 description: 为视频、文章、播客设计可编辑的社媒封面与缩略图；需要封面创意、排版或成品时使用。
 description_zh: 提炼内容亮点，制作可编辑封面，并检查缩略图可读性。
 description_en: Design editable covers and thumbnails for creator content.
 version: 0.1.0
-author: Covercraft contributors
+author: ThumbBloom contributors
 examples_zh:
   - "为我的短视频设计醒目的封面"
   - "给这篇文章做一个有编辑感的封面"
 ---
 
-# Covercraft · 封面工坊
+# ThumbBloom · 封面灵感
 
 Turn a creator's content into a cover that is accurate, readable at thumbnail size, and easy to revise. Respond in the user's language. Use the tools available in the host agent; the skill itself needs no API key.
 
