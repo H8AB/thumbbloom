@@ -1,0 +1,11 @@
+{
+  "name": "covercraft",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "examples": "node scripts/build-examples.mjs",
+    "workbuddy": "node scripts/build-workbuddy.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}
