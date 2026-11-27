@@ -27,6 +27,8 @@ The repository's `examples/` folder contains three editable SVG cases. `npm run 
 
 ## Response format
 
-Give the chosen concept, main copy, canvas ratio/dimensions, color/type choices, and links to actual output files. Note any assumed platform dimensions or unresolved rights. When the user requests variants, keep the content promise consistent while changing the design strategy.
+Show the cover first, explain the main line and intended platform briefly, and link to the actual image. Offer dimensions, type choices, and editable files when useful or requested. Accept ordinary revisions such as “shorten the title” or “use a warmer color.” Note any assumed platform dimensions or unresolved rights. When the user requests variants, keep the content promise consistent while changing the design strategy.
+
+Public examples and trial suggestions must use fictional or public information, never a user's account details, chat history, private files, contacts, or local paths. Check the cover and attachments before sharing.
 
 Read [references/cover-design.md](references/cover-design.md) when you need platform adaptation, copy guidance, or the quality checklist. Read [references/examples.md](references/examples.md) when testing the skill or looking for realistic briefs.

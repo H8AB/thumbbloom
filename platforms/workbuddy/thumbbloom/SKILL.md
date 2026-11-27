@@ -1,17 +1,19 @@
 ---
 name: thumbbloom
-display_name: ThumbBloom
+display_name: 社媒封面设计
 display_name_en: ThumbBloom
-description: Design editable social covers and thumbnails for videos, articles, and podcasts.
-description_zh: 提炼内容亮点，制作可编辑封面，并检查缩略图可读性。
+display_name_zh: 社媒封面设计
+description: 从视频、文章或播客里找出最值得被看见的重点，做成手机上也清楚的封面。
+description_zh: 从视频、文章或播客里找出最值得被看见的重点，做成手机上也清楚的封面。
 description_en: Design editable covers and thumbnails for creator content.
-version: 0.1.0
+version: 0.1.1
 author: ThumbBloom contributors
 examples_en:
   - "Design a bold cover for my video"
   - "Create an editorial cover for this article"
 examples_zh:
-  - "为我的短视频设计封面"
+  - "这期视频讲我怎么用 AI 整理会议记录，帮我做张让人愿意点开的封面。"
+  - "这篇文章要发公众号，帮我做一张手机上也看得清的封面。"
 ---
 
 # ThumbBloom
@@ -36,6 +38,8 @@ The repository's `examples/` folder contains three editable SVG cases. `npm run 
 
 ## Response format
 
-Give the chosen concept, main copy, canvas ratio/dimensions, color/type choices, and links to actual output files. Note any assumed platform dimensions or unresolved rights. When the user requests variants, keep the content promise consistent while changing the design strategy.
+Show the cover first, explain the main line and intended platform briefly, and link to the actual image. Offer dimensions, type choices, and editable files when useful or requested. Accept ordinary revisions such as “shorten the title” or “use a warmer color.” Note any assumed platform dimensions or unresolved rights. When the user requests variants, keep the content promise consistent while changing the design strategy.
+
+Public examples and trial suggestions must use fictional or public information, never a user's account details, chat history, private files, contacts, or local paths. Check the cover and attachments before sharing.
 
 Read [references/cover-design.md](references/cover-design.md) when you need platform adaptation, copy guidance, or the quality checklist. Read [references/examples.md](references/examples.md) when testing the skill or looking for realistic briefs.
